@@ -9,7 +9,7 @@ namespace CarouselRegression
 {
     public class MainPageModel: INotifyPropertyChanged
     {
-        private ObservableCollection<View> _itemCollection;
+        private ObservableCollection<ContentView> _itemCollection;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -18,7 +18,7 @@ namespace CarouselRegression
             LoadCarouselItems();
         }
 
-        public ObservableCollection<View> ItemCollection
+        public ObservableCollection<ContentView> ItemCollection
         {
             get => _itemCollection;
             set => SetProperty(ref _itemCollection, value);
@@ -26,7 +26,7 @@ namespace CarouselRegression
 
         public void LoadCarouselItems()
         {
-            var itemCollection = new ObservableCollection<View>();
+            var itemCollection = new ObservableCollection<ContentView>();
 
             //Add two content views
             itemCollection.Add(new ContentView1());
