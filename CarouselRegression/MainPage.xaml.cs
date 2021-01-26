@@ -17,12 +17,5 @@ namespace CarouselRegression
             InitializeComponent();
             BindingContext = _vm = new MainPageModel();
         }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            _vm.LoadCarouselItems();
-        }
     }
 }

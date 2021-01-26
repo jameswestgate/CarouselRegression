@@ -3,25 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CarouselRegression.MainPage">
 
-       <Grid RowSpacing="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="{Binding IndicatorHeight}"/>
-            </Grid.RowDefinitions>
-
-            <ScrollView x:Name="ScrollControl"
-                Grid.Row="0"
-                Margin="0"
-                VerticalOptions="FillAndExpand"
-                Orientation="Vertical">
+        <StackLayout Orientation="Vertical">
 
             <CarouselView x:Name="CarouselViewControl"
                 ItemsSource="{Binding ItemCollection}"
                 CurrentItem="{Binding CurrentItem}"
                 IndicatorView="IndicatorViewControl"
                 HorizontalScrollBarVisibility="Never"
-                IsSwipeEnabled="{Binding CarouselActive}"
-                IsScrollAnimated="False"
 
                 AutomationProperties.IsInAccessibleTree="True"
                 AutomationProperties.Name="Carousel">
@@ -32,18 +20,17 @@
 				    </DataTemplate>
 			    </CarouselView.ItemTemplate>
             </CarouselView>
-        </ScrollView>
 
-        <IndicatorView  x:Name="IndicatorViewControl"
-            Grid.Row="1"
-            IsVisible="{Binding IndicatorActive}"       
-            HideSingle="true"
-            HorizontalOptions="Center"
-            BackgroundColor="Gray"
-
-            WidthRequest="100"
-            AutomationProperties.IsInAccessibleTree="True"
-            AutomationProperties.Name="Carousel Indicator"/>
-        </Grid>
+            <IndicatorView  x:Name="IndicatorViewControl"
+                Grid.Row="1"    
+                HideSingle="true"
+                HorizontalOptions="Center"
+                BackgroundColor="Gray"
+    
+                WidthRequest="100"
+                HeightRequest="30"
+                AutomationProperties.IsInAccessibleTree="True"
+                AutomationProperties.Name="Carousel Indicator"/>
+       </StackLayout>
 
 </ContentPage>

@@ -6,17 +6,11 @@
             AutomationProperties.Name="Content View 2">
         
     <ContentView.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
-
             <Label Text="Content View 2"
-                   BackgroundColor="Green"
-                   Grid.Row="1"/>
-
-        </Grid>
+                   Margin="50,50,50,50"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   BackgroundColor="Green"/>
     </ContentView.Content>
 </ContentView>
