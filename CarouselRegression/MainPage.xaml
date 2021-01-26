@@ -9,10 +9,7 @@
                 ItemsSource="{Binding ItemCollection}"
                 CurrentItem="{Binding CurrentItem}"
                 IndicatorView="IndicatorViewControl"
-                HorizontalScrollBarVisibility="Never"
-
-                AutomationProperties.IsInAccessibleTree="True"
-                AutomationProperties.Name="Carousel">
+                HorizontalScrollBarVisibility="Never">
 
                 <CarouselView.ItemTemplate>
 				    <DataTemplate>
@@ -22,15 +19,12 @@
             </CarouselView>
 
             <IndicatorView  x:Name="IndicatorViewControl"
-                Grid.Row="1"    
-                HideSingle="true"
                 HorizontalOptions="Center"
                 BackgroundColor="Gray"
     
                 WidthRequest="100"
-                HeightRequest="30"
-                AutomationProperties.IsInAccessibleTree="True"
-                AutomationProperties.Name="Carousel Indicator"/>
+                HeightRequest="30"/>
+
        </StackLayout>
 
 </ContentPage>
