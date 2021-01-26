@@ -10,7 +10,6 @@ namespace CarouselRegression
     public class MainPageModel: INotifyPropertyChanged
     {
         private ObservableCollection<View> _itemCollection;
-        private View _currentItem;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -25,18 +24,6 @@ namespace CarouselRegression
             set => SetProperty(ref _itemCollection, value);
         }
 
-        public View CurrentItem
-        {
-            get => _currentItem;
-            set
-            {
-                if (value != _currentItem)
-                {
-                    SetProperty(ref _currentItem, value);
-                }
-            }
-        }
-
         public void LoadCarouselItems()
         {
             var itemCollection = new ObservableCollection<View>();
@@ -47,9 +34,6 @@ namespace CarouselRegression
 
             //Set the collection
             ItemCollection = itemCollection;
-
-            //Check at least one token type is selected, move the carousel.
-            if (itemCollection.Count > 0) CurrentItem = itemCollection[0];
         }
 
         //Implement INotifyPropertyChanged

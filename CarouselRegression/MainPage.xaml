@@ -7,7 +7,6 @@
 
             <CarouselView x:Name="CarouselViewControl"
                 ItemsSource="{Binding ItemCollection}"
-                CurrentItem="{Binding CurrentItem}"
                 IndicatorView="IndicatorViewControl"
                 HorizontalScrollBarVisibility="Never">
 
