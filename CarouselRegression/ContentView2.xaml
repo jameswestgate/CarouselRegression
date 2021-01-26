@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarouselRegression.ContentView2"
+             AutomationProperties.IsInAccessibleTree="true"
+            AutomationProperties.Name="Content View 2">
+        
+    <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Content View 2"
+                   BackgroundColor="Green"
+                   Grid.Row="1"/>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>
