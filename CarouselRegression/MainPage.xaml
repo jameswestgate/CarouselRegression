@@ -8,7 +8,8 @@
             <CarouselView x:Name="CarouselViewControl"
                 ItemsSource="{Binding ItemCollection}"
                 IndicatorView="IndicatorViewControl"
-                HorizontalScrollBarVisibility="Never">
+                HorizontalScrollBarVisibility="Never"
+                Loop="True">
 
                 <CarouselView.ItemTemplate>
 				    <DataTemplate>
@@ -17,9 +18,11 @@
 			    </CarouselView.ItemTemplate>
             </CarouselView>
 
-            <IndicatorView  x:Name="IndicatorViewControl"
+            <IndicatorView x:Name="IndicatorViewControl"
                 HorizontalOptions="Center"
                 BackgroundColor="Gray"
+                IndicatorColor="White"
+                SelectedIndicatorColor="Blue"
     
                 WidthRequest="100"
                 HeightRequest="30"/>
