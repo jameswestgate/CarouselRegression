@@ -9,10 +9,10 @@
                 ItemsSource="{Binding ItemCollection}"
                 IndicatorView="IndicatorViewControl"
                 HorizontalScrollBarVisibility="Never">
-
+                
                 <CarouselView.ItemTemplate>
 				    <DataTemplate>
-					    <ContentView Content="{Binding .}" />
+					    <ContentView Content="{Binding .}"  />
 				    </DataTemplate>
 			    </CarouselView.ItemTemplate>
             </CarouselView>
@@ -20,7 +20,8 @@
             <IndicatorView  x:Name="IndicatorViewControl"
                 HorizontalOptions="Center"
                 BackgroundColor="Gray"
-    
+                IndicatorColor="White"
+                SelectedIndicatorColor="Blue"
                 WidthRequest="100"
                 HeightRequest="30"/>
 
